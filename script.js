@@ -2,7 +2,8 @@
 
 let question = +prompt('Угадай число от 1 до 100');
 
-function checkNull() {
+
+function game() {
 
    let number = 20;
 
@@ -15,17 +16,17 @@ function checkNull() {
    if (question > number) {
       number = 20;
       question = +prompt('Загаданное число меньше, попробуйте еще раз');
-      checkNull();
+      game();
    } else if (question < number) {
       question = +prompt('Загаданное число больше, попробуйте еще раз');
-      checkNull();
+      game();
    } else if (question === number) {
       question = alert('Поздравляю, Вы угадали!!!');
       return question;
    } else if (question !== isNaN) {
       question = +prompt('Введи число!');
-      checkNull();
+      game();
    }
 }
 
-checkNull();
+game();
