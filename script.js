@@ -2,7 +2,6 @@
 
 let question = +prompt('Угадай число от 1 до 100');
 
-
 function checkNull() {
 
    let number = 20;
