@@ -34,7 +34,7 @@ function game() {
       question = +prompt('Загаданное число больше, осталось попыток ' + count + ' Попробуйте еще раз');
       game();
    } else if (question === number) {
-      question = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?'); //ВОТ ТУТ ЧТО-ТО НЕ ТАК ПОМОГИТЕ =()
+      question = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?'); //ВОТ ТУТ ЧТО-ТО НЕ ТАК ПОМОГИТЕ =(
       game();
    } else if (question !== isNaN) {
       question = +prompt('Введи число!');
