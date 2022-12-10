@@ -7,10 +7,24 @@ function game() {
 
    let number = 20;
 
+   if (question === number) { //вот тут что-то не так ПОМОГИТЕ =(
+      question = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?');
+      if (question == true) {
+         count = 11;
+         return game();
+
+      } else {
+         question = alert('Игра окончена');
+         console.log('Игра окончена');
+         return;
+      }
+
+   }
    if (count == 1) {
       confirm('Попытки закончились, хотите сыграть еще?');
-      if (question == null) {
+      if (question == null || question == '') {
          question = alert('Игра окончена');
+         console.log('Игра окончена');
          return;
       } else {
          count = 11;
@@ -19,7 +33,7 @@ function game() {
    }
 
    if (question == null || question == '') {
-      question = alert('Игра окончена');
+      question = alert('Игра окончена, прощайте');
       console.log('Игра окончена');
       return;
    }
@@ -29,21 +43,14 @@ function game() {
    if (question > number) {
       number = 20;
       question = +prompt('Загаданное число меньше, осталось попыток  ' + count + ' Попробуйте еще раз');
-      game();
-   } else if (question < number) {
+      return game();
+   }
+   if (question < number) {
       question = +prompt('Загаданное число больше, осталось попыток ' + count + ' Попробуйте еще раз');
-      game();
-   } else if (question === number) { //вот тут что-то не так ПОМОГИТЕ =(
-      question = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?');
-      if (question == null) {
-         question = alert('Игра окончена');
-         console.log('Игра окончена');
-      } else {
-         count = 11;
-         game();
-      }
-      return question;
-   } else if (question !== isNaN) {
+      return game();
+   }
+
+   if (question !== isNaN) {
       question = +prompt('Введи число!');
       game();
    }
