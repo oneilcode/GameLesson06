@@ -7,11 +7,11 @@ function game() {
 
    let number = 20;
 
-   if (question === number) { //вот тут что-то не так ПОМОГИТЕ =(
+   if (question === number) {
       question = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?');
       if (question == true) {
          count = 11;
-         question = +prompt('Введи число!');
+         question = +prompt('Введи число!'); //добавила эту функцию и все теперь работает, хотя думаю, что это не самый лучший способ :(
          return game();
 
       } else {
