@@ -11,6 +11,7 @@ function game() {
       question = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?');
       if (question == true) {
          count = 11;
+         question = +prompt('Введи число!');
          return game();
 
       } else {
@@ -18,7 +19,6 @@ function game() {
          console.log('Игра окончена');
          return;
       }
-
    }
    if (count == 1) {
       confirm('Попытки закончились, хотите сыграть еще?');
